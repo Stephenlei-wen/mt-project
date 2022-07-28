@@ -1,0 +1,12 @@
+.main-header{
+    padding-left: 400px;
+}
+.main-header ul{
+    display: flex;
+}
+.main-header ul li{
+    list-style: none;
+    margin-right: 10px;
+    border: 1px solid lightpink;
+    cursor: pointer;
+}
