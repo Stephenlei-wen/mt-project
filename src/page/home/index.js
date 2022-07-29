@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import SideMenu from "../../layout/sidemenu";
 import Header from "../../layout/header";
-import Router from '../../api/router'
+import Router from '../../routes'
 import './index.css'
+import api from '../../api/index'
 function Page(props) {
     const [store, dispatch] = props.store
     useEffect(() => {
@@ -10,10 +11,10 @@ function Page(props) {
         // dispatch({ type: "nav", nav: "1212" })
     }, [])
     return <div className="main">
-        <Header store={props.store}></Header>
-        <SideMenu store={props.store}></SideMenu>
+        <Header store={props.store} api={api}></Header>
+        <SideMenu store={props.store} api={api}></SideMenu>
         <div className="main-cantainer">
-            <Router store={props.store}></Router>
+            <Router store={props.store} api={api}></Router>
         </div>
     </div>
 }
