@@ -77,13 +77,13 @@ const router = [
 ]
 function Router(props) {
     const [store, dispatch] = props.store
-    console.log(store, "全局变量");
+    const { api } = props
     let newRouter = router.filter((item) => { return item.routes[0].sideId === store.nav })
     const routeArry = newRouter[0].routes
     return <Routes>
         {
             routeArry.map((item, index) => {
-                return <Route key={index} path={item.path} element={<item.component />}></Route>
+                return <Route key={index} path={item.path} element={<item.component api={api} />}></Route>
             })
         }
     </Routes>

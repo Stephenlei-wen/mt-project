@@ -3,7 +3,7 @@ const api = {
     list: (option) => {
         option.data = option.data || {};
         return req({
-            url: '/api/ao/hosts',
+            url: `/api/vm/asset_softwares/stats/${option.target}`,
             method: 'get',
             ...option
         })

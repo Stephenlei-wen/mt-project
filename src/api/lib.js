@@ -2,6 +2,7 @@ import axios from 'axios'
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 const client = axios.create({});
 
+// client.defaults.baseURL = 'http://10.1.16.36:10280';
 // 添加请求拦截器
 client.interceptors.request.use(
     config => {

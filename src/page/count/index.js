@@ -1,7 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { context } from '../../reducer/index'
-function Count() {
+function Page(props) {
+    const { api } = props
+    console.log(api);
     let [state, dispatch] = useContext(context)
+    useEffect(() => {
+        api.test.list({ target: 'category' }).then((data) => {
+        })
+    }, [])
     return (
         <div>
             <h1>count:{state.count}</h1>
@@ -12,4 +18,4 @@ function Count() {
         </div>
     )
 }
-export default Count
+export default Page
