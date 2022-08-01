@@ -3,6 +3,7 @@ import Count from '../page/count'
 import ShowCount from '../page/showcount'
 import Display from '../page/display/index'
 import Displays from '../page/display2/index'
+import Login from '../page/Login/index'
 import context from '../reducer/index.js'
 import {
     Route,
@@ -29,6 +30,10 @@ const router = [
             {
                 path: '/page4',
                 component: Displays,
+            },
+            {
+                path: '/login',
+                component: Login,
             }
         ]
     },

@@ -1,5 +1,7 @@
 import test from './test'
+import login from './login'
 const api = {
-    test
+    test,
+    login
 }
 export default api

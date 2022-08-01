@@ -27,6 +27,10 @@ export default function SideMenu(props) {
                     path: '/page4',
                     label: '页面4'
                 },
+                {
+                    path: '/login',
+                    label: '登录'
+                },
             ]
         },
         {
@@ -47,7 +51,11 @@ export default function SideMenu(props) {
                 {
                     path: '/page4',
                     label: '页面4'
-                }
+                },
+                {
+                    path: '/login',
+                    label: '登录'
+                },
             ]
         },
         {
