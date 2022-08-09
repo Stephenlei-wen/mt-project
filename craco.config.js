@@ -1,26 +1,26 @@
-const CracoAntDesignPlugin = require("craco-antd");
-
-const lessModuleRegex = /\.module\.less$/;
+const CracoLessPlugin = require('craco-less');
+const path = require("path");
+const resolve = dir => path.resolve(__dirname, dir);
 
 module.exports = {
-    plugins: [
-        {
-            plugin: CracoAntDesignPlugin,
-            options: {
-                // less loader optoins
-                lessLoaderOptions: {
-                    lessOptions: {
-                        javascriptEnabled: true,
-                        sourceMap: false,
-                    },
-                },
-                // 这个是按需导入
-                babelPluginImportOptions: {
-                    libraryName: "antd",
-                    libraryDirectory: "es",
-                    style: true,
-                },
-            },
+  plugins: [
+    {
+      plugin: CracoLessPlugin,
+      options: {
+        lessLoaderOptions: {
+          lessOptions: {
+            modifyVars: { '@primary-color': '#1DA57A' },//配置antd主题色
+            javascriptEnabled: true,
+          },
         },
-    ],
-};
+      },
+    }
+  ],
+  webpack: {
+    // 配置别名,可以直接从根目录下面开始查找文件
+    alias: {
+      "@": resolve("src"),
+      "components": resolve("src/components")
+    }
+  }
+}
