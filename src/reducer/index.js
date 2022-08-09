@@ -4,6 +4,8 @@ let initState = {
     isShow: false,
     nav: "nav"
 }
+//nav默认的页面
+//nav1默认的xrc项目的页面
 function countReducer(initState, action) {
     switch (action.type) {
         case 'increment':

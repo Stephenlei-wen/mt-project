@@ -3,6 +3,8 @@ import ShowCount from '../page/showcount'
 import Display from '../page/display/index'
 import Displays from '../page/display2/index'
 import Login from '../page/Login/index'
+
+import AntvG6 from '../page/XRC/antvg6/index'
 const router = [
     {
         routes: [
@@ -37,10 +39,10 @@ const router = [
     {
         routes: [
             {
-                path: '/page1',
-                component: Count,
+                path: '/xrc/antvg6',
+                component: AntvG6,
                 sideId: "nav1",
-                name: "登录页1"
+                name: "antvg6页面"
             },
             {
                 path: '/page2',

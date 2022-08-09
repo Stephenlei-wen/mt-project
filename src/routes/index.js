@@ -12,6 +12,7 @@ function Router(props) {
     const { api } = props
     let newRouter = router.filter((item) => { return item.routes[0].sideId === store.nav })
     const routeArry = newRouter[0].routes
+    console.log(routeArry,"现在的路由");
     return <Routes>
         {
             routeArry.map((item, index) => {

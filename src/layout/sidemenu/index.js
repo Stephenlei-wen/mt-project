@@ -36,8 +36,8 @@ export default function SideMenu(props) {
         {
             linkArr: [
                 {
-                    path: '/page1',
-                    label: '页面1',
+                    path: '/xrc/antvg6',
+                    label: 'antvg6',
                     sideId: "nav1"
                 },
                 {
@@ -78,10 +78,6 @@ export default function SideMenu(props) {
     ]
     let newSidemenu = sidemenu.filter((item) => { return item.linkArr[0].sideId === store.nav })
     let menuArry = newSidemenu[0].linkArr
-    // sidemenu.forEach(item=>{
-    //     item.linkArr[0]==store.sideId
-    // })
-    // if(store.nav=)
     return <div>
         <ul className="list">
             {
