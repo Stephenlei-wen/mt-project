@@ -3,7 +3,7 @@ import {Button, Input} from "antd";
 
 import loginLogo from "../../assets/company_logo.jpg";
 
-// import './index.scss';
+import './index.less';
 import { LockOutlined } from "@ant-design/icons";
 
 function Login(props) {

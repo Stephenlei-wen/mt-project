@@ -4,7 +4,7 @@ import {
     Link,
     Routes,
 } from "react-router-dom";
-import './index.css'
+import './index.less'
 export default function Header(props) {
     const [store, dispatch] = props.store
     const navArry = [
@@ -15,7 +15,7 @@ export default function Header(props) {
     ]
     return <div className="main-header">
         {navArry.map((item, index) => {
-            return <Link key={index} to={item.path || ''} onClick={() => { dispatch({ type: "nav", nav: item.sideId }) }}>{item.title}</Link>
+            return <Link className="main-header-item" key={index} to={item.path || ''} onClick={() => { dispatch({ type: "nav", nav: item.sideId }) }}>{item.title}</Link>
         })}
     </div>
 }
